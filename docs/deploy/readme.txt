@@ -8,7 +8,7 @@ C，程序升级/检验
 1，eclipse导出war包
 
 2. 本地war包上传至服务器
-  scp -P 57652 xn-mall.war root@121.43.101.148:/home  
+  scp -P 57652 std-base.war root@121.43.101.148:/home  
 
 3. 备份原先配置(如果第一次部署，跳过此步骤)
   ssh root@121.43.101.148 -p 57652
