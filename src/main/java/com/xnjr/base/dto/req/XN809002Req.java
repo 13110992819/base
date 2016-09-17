@@ -1,11 +1,3 @@
-/**
- * @Title XNlh5012Req.java 
- * @Package com.xnjr.moom.dto.req 
- * @Description 
- * @author haiqingzheng  
- * @date 2016年4月17日 下午6:54:44 
- * @version V1.0   
- */
 package com.xnjr.base.dto.req;
 
 /** 

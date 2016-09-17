@@ -13,7 +13,7 @@ package com.xnjr.base.dto.req;
  * @since: 2016年4月17日 下午10:43:57 
  * @history:
  */
-public class XNlh5033Req {
+public class XN809016Req {
     private String id;
 
     public String getId() {

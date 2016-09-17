@@ -4,7 +4,7 @@ import com.xnjr.base.ao.ISYSConfigAO;
 import com.xnjr.base.api.AProcessor;
 import com.xnjr.base.common.JsonUtil;
 import com.xnjr.base.core.StringValidater;
-import com.xnjr.base.dto.req.XNlh5034Req;
+import com.xnjr.base.dto.req.XN809017Req;
 import com.xnjr.base.exception.BizException;
 import com.xnjr.base.exception.ParaException;
 import com.xnjr.base.spring.SpringContextHolder;
@@ -19,7 +19,7 @@ public class XN809017 extends AProcessor {
     private ISYSConfigAO sysConfigAO = SpringContextHolder
         .getBean(ISYSConfigAO.class);
 
-    private XNlh5034Req req = null;
+    private XN809017Req req = null;
 
     /** 
      * @see com.xnjr.base.api.IProcessor#doBusiness()
@@ -34,7 +34,7 @@ public class XN809017 extends AProcessor {
      */
     @Override
     public void doCheck(String inputparams) throws ParaException {
-        req = JsonUtil.json2Bean(inputparams, XNlh5034Req.class);
+        req = JsonUtil.json2Bean(inputparams, XN809017Req.class);
         StringValidater.validateBlank(req.getKey());
     }
 

@@ -13,7 +13,7 @@ package com.xnjr.base.dto.req;
  * @since: 2016年6月12日 下午1:36:37 
  * @history:
  */
-public class XNlh5034Req {
+public class XN809017Req {
     // 配置文件名
     private String key;
 

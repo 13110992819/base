@@ -7,7 +7,7 @@ import com.xnjr.base.api.AProcessor;
 import com.xnjr.base.common.JsonUtil;
 import com.xnjr.base.core.StringValidater;
 import com.xnjr.base.domain.SYSConfig;
-import com.xnjr.base.dto.req.XN809012Req;
+import com.xnjr.base.dto.req.XN809015Req;
 import com.xnjr.base.exception.BizException;
 import com.xnjr.base.exception.ParaException;
 import com.xnjr.base.spring.SpringContextHolder;
@@ -22,13 +22,12 @@ public class XN809015 extends AProcessor {
     private ISYSConfigAO sysConfigAO = SpringContextHolder
         .getBean(ISYSConfigAO.class);
 
-    private XN809012Req req = null;
+    private XN809015Req req = null;
 
     @Override
     public Object doBusiness() throws BizException {
         SYSConfig data = new SYSConfig();
         data.setCkeyForQuery(req.getCkey());
-        data.setDhhlFlag(req.getDhhlFlag());
         String orderColumn = req.getOrderColumn();
         if (StringUtils.isBlank(orderColumn)) {
             orderColumn = ISYSConfigAO.DEFAULT_ORDER_COLUMN;
@@ -41,7 +40,7 @@ public class XN809015 extends AProcessor {
 
     @Override
     public void doCheck(String inputparams) throws ParaException {
-        req = JsonUtil.json2Bean(inputparams, XN809012Req.class);
+        req = JsonUtil.json2Bean(inputparams, XN809015Req.class);
         StringValidater.validateBlank(req.getStart(), req.getLimit());
     }
 
