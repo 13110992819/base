@@ -1,8 +1,8 @@
 package com.xnjr.base.dto.req;
 
-/** 
- * @author: haiqingzheng 
- * @since: 2016年4月17日 下午8:07:53 
+/**
+ * @author: xieyj 
+ * @since: 2016年9月17日 下午4:09:17 
  * @history:
  */
 public class XN809006Req extends APageReq {

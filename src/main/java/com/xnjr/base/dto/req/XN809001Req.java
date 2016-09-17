@@ -1,8 +1,8 @@
 package com.xnjr.base.dto.req;
 
-/** 
- * @author: haiqingzheng 
- * @since: 2016年4月17日 下午6:32:55 
+/**
+ * @author: xieyj 
+ * @since: 2016年9月17日 下午4:08:57 
  * @history:
  */
 public class XN809001Req {

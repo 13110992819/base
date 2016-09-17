@@ -1,5 +1,10 @@
 package com.xnjr.base.dto.req;
 
+/**
+ * @author: xieyj 
+ * @since: 2016年9月17日 下午4:09:34 
+ * @history:
+ */
 public class XN809011Req {
     // 编号
     private Long id;

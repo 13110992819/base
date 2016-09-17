@@ -1,7 +1,6 @@
 package com.xnjr.base.dto.req;
 
 /**
- * 日志查询
  * @author: xieyj 
  * @since: 2016年9月17日 下午1:40:33 
  * @history:
