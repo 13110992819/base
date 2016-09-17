@@ -1,16 +1,8 @@
-/**
- * @Title XNlh5034Req.java 
- * @Package com.xnjr.mall.dto.req 
- * @Description 
- * @author haiqingzheng  
- * @date 2016年6月12日 下午1:36:37 
- * @version V1.0   
- */
 package com.xnjr.base.dto.req;
 
-/** 
- * @author: haiqingzheng 
- * @since: 2016年6月12日 下午1:36:37 
+/**
+ * @author: xieyj 
+ * @since: 2016年9月17日 下午3:58:52 
  * @history:
  */
 public class XN809017Req {
