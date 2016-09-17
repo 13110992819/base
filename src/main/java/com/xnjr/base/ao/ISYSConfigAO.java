@@ -4,9 +4,8 @@ import com.xnjr.base.bo.base.Paginable;
 import com.xnjr.base.domain.SYSConfig;
 
 /**
- * 
- * @author: Gejin 
- * @since: 2016年4月17日 下午7:00:47 
+ * @author: xieyj 
+ * @since: 2016年9月17日 下午4:02:23 
  * @history:
  */
 public interface ISYSConfigAO {
@@ -22,5 +21,5 @@ public interface ISYSConfigAO {
 
     public SYSConfig getSYSConfig(Long id);
 
-    public SYSConfig getConfigValue(String key);
+    public SYSConfig getConfigValue(String ckey);
 }

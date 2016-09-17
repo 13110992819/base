@@ -7,13 +7,13 @@ package com.xnjr.base.dto.req;
  */
 public class XN809017Req {
     // 配置文件名
-    private String key;
+    private String ckey;
 
-    public String getKey() {
-        return key;
+    public String getCkey() {
+        return ckey;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setCkey(String ckey) {
+        this.ckey = ckey;
     }
 }

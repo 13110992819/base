@@ -62,8 +62,8 @@ public class SYSConfigAOImpl implements ISYSConfigAO {
     }
 
     @Override
-    public SYSConfig getConfigValue(String key) {
-        return sysConfigBO.getConfigValue(key);
+    public SYSConfig getConfigValue(String ckey) {
+        return sysConfigBO.getConfigValue(ckey);
     }
 
 }

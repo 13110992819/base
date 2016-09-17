@@ -26,7 +26,7 @@ public class XN809017 extends AProcessor {
      */
     @Override
     public Object doBusiness() throws BizException {
-        return sysConfigAO.getConfigValue(req.getKey());
+        return sysConfigAO.getConfigValue(req.getCkey());
     }
 
     /** 
@@ -35,7 +35,7 @@ public class XN809017 extends AProcessor {
     @Override
     public void doCheck(String inputparams) throws ParaException {
         req = JsonUtil.json2Bean(inputparams, XN809017Req.class);
-        StringValidater.validateBlank(req.getKey());
+        StringValidater.validateBlank(req.getCkey());
     }
 
 }
