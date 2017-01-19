@@ -17,7 +17,7 @@
 		<trim prefix="WHERE" prefixOverrides="AND | OR">
 			<if test="id != null">
 				AND t.id = #{id}
-			</if>	
+			</if>
 			<if test="toSystem != null and toSystem != '' ">
 				AND t.to_system = #{toSystem}
 			</if>
@@ -29,7 +29,7 @@
 			</if>
 			<if test="parentKey != null and parentKey != '' ">
 				AND t.parent_key = #{parentKey}
-			</if>	
+			</if>
 		</trim>
 	</sql>
 	<select id="select_sysDict" parameterType="sysDict" resultMap="sysDict_DB_Result">
@@ -39,27 +39,29 @@
 		,type
 		,parent_key
 		,dkey
-		
+
 		,dvalue
 		,updater
 		,update_datetime
 		,remark
 		FROM
-		tsys_dict t 
+		tsys_dict t
 		<include refid="where_condition" />
 		<trim prefix="ORDER BY ">
 			<if test="order != null and order != '' ">
 				${order}
 			</if>
-		</trim>	
+		</trim>
 	</select>
 
-	<select id="select_sysDict_count" parameterType="sysDict" resultType="java.lang.Long">
-		SELECT count(1) FROM tsys_dict t 
+	<select id="select_sysDict_count" parameterType="sysDict"
+		resultType="java.lang.Long">
+		SELECT count(1) FROM tsys_dict t
 		<include refid="where_condition" />
 	</select>
-	
-	<insert id="insert_sysDict" parameterType="sysDict" useGeneratedKeys="true" keyProperty="id">
+
+	<insert id="insert_sysDict" parameterType="sysDict"
+		useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO tsys_dict(
 		to_system
 		,type
@@ -87,12 +89,13 @@
 		WHERE
 		id = #{id}
 	</delete>
-	
+
 	<update id="update_sysDict" parameterType="sysDict">
 		UPDATE tsys_dict SET
 		dvalue = #{dvalue}
 		,updater = #{updater}
-		,update_datetime = #{updateDatetime}
+		,update_datetime =
+		#{updateDatetime}
 		,remark=#{remark}
 		WHERE id = #{id}
 	</update>

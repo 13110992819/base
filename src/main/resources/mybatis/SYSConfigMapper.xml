@@ -16,20 +16,20 @@
 		<trim prefix="WHERE" prefixOverrides="AND | OR">
 			<if test="id != null">
 				AND t.id = #{id}
-			</if>	
+			</if>
 			<if test="toSystem != null and toSystem != '' ">
 				AND t.to_system = #{toSystem}
 			</if>
 			<if test="ckey != null and ckey != '' ">
 				AND t.ckey = #{ckey}
-			</if>	
+			</if>
 			<choose>
-				 <when test="dhhlFlag == 'notIn'">
-				 	AND t.ckey not in('TOP_TWO_DHHL','TWO_THREE_DHHL','GOODS_TOP_DHHL')
-				 </when>
-				 <when test="dhhlFlag == 'in'">
-				 	AND t.ckey in('TOP_TWO_DHHL','TWO_THREE_DHHL','GOODS_TOP_DHHL')
-				 </when>
+				<when test="dhhlFlag == 'notIn'">
+					AND t.ckey not in('TOP_TWO_DHHL','TWO_THREE_DHHL','GOODS_TOP_DHHL')
+				</when>
+				<when test="dhhlFlag == 'in'">
+					AND t.ckey in('TOP_TWO_DHHL','TWO_THREE_DHHL','GOODS_TOP_DHHL')
+				</when>
 			</choose>
 			<if test="ckeyForQuery != null and ckeyForQuery != '' ">
 				AND t.ckey like "%"#{ckeyForQuery}"%"
@@ -39,7 +39,8 @@
 			</if>
 		</trim>
 	</sql>
-	<select id="select_sysConfig" parameterType="sysConfig" resultMap="sysConfig_DB_Result">
+	<select id="select_sysConfig" parameterType="sysConfig"
+		resultMap="sysConfig_DB_Result">
 		SELECT
 		id
 		,to_system
@@ -50,21 +51,23 @@
 		,update_datetime
 		,remark
 		FROM
-		tsys_config t 
+		tsys_config t
 		<include refid="where_condition" />
 		<trim prefix="ORDER BY ">
 			<if test="order != null and order != '' ">
 				${order}
 			</if>
-		</trim>	
+		</trim>
 	</select>
 
-	<select id="select_sysConfig_count" parameterType="sysConfig" resultType="java.lang.Long">
-		SELECT count(1) FROM tsys_config t 
+	<select id="select_sysConfig_count" parameterType="sysConfig"
+		resultType="java.lang.Long">
+		SELECT count(1) FROM tsys_config t
 		<include refid="where_condition" />
 	</select>
-	
-	<insert id="insert_sysConfig" parameterType="sysConfig" useGeneratedKeys="true" keyProperty="id">
+
+	<insert id="insert_sysConfig" parameterType="sysConfig"
+		useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO tsys_config(
 		to_system
 		,ckey
@@ -84,7 +87,7 @@
 		,#{remark}
 		)
 	</insert>
-	
+
 	<update id="update_value" parameterType="sysConfig">
 		UPDATE tsys_config SET
 		cvalue = #{cvalue}

@@ -46,7 +46,7 @@
 		,to_table
 		,to_row
 		,to_column
-		,operate_type		
+		,operate_type
 		,pre_value
 		,post_value
 		,operater
@@ -75,7 +75,7 @@
 		,to_table
 		,to_row
 		,to_column
-		,operate_type		
+		,operate_type
 		,pre_value
 		,post_value
 		,operater
@@ -94,5 +94,5 @@
 		,#{operateDatetime}
 		)
 	</insert>
-	
+
 </mapper>
